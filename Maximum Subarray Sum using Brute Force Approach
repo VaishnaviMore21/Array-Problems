@@ -1,0 +1,25 @@
+
+ Here we have used Brute Force Approach for Solving 
+
+import java.util.*;
+public class Maxsubsum {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int n=5;
+		int arr[]= {1,2,3,4,5};
+		int maxsum=0;
+		for(int st=0;st<n;st++)
+		{
+			int currsum=0;
+			for( int end=st;end<n;end++)
+			{
+			  currsum+=arr[end];
+			  maxsum=Math.max(currsum,maxsum);
+			}
+		}
+		System.out.println("Max subarray sum="+maxsum);
+
+	}
+
+}
